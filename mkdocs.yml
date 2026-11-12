@@ -1,0 +1,40 @@
+site_name: IOS_XR_Lab_Guide
+site_description: Hands-on IOS XR lab preparation, configuration, operations, and BGP exercises.
+site_url: https://gchellia79.github.io/IOS_XR_Lab_Guide/
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.footer
+    - content.code.copy
+    - search.highlight
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+plugins:
+  - search
+  - glightbox
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+nav:
+  - Home: index.md
+  - 01. Preparation: 01-preparation/index.md
+  - 02. Commit configuration: 02-commit-configuration/index.md
+  - 03. Operations and monitoring: 03-operations-and-monitoring/index.md
+  - 04. BGP: 04-bgp/index.md
