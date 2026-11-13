@@ -169,14 +169,11 @@ IOS XR retains a history of committed configurations. Use a label or a previous 
 Show configuration commit changes last <Number of commits>
 show configuration commit list
 show cli history detail
-show context
-show exceptions
 ```
 
 - Use the commit-change command to view configuration changes since the specified number of commits.
 - Use the commit list to inspect previous commits.
 - Use CLI history to view executed commands.
-- Use `show context` and `show exceptions` to inspect crash information.
 
 !!! warning "TODO"
     The source does not include rollback or operational-history output.

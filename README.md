@@ -23,7 +23,7 @@ Install the extraction-only dependency in the virtual environment:
 
 ```text
 pip install python-docx
-python tools/docx_extract.py IOS_XR_Lab_Guide_0.1.docx --output _import
+python tools/docx_extract.py IOS_XR_Lab_Guide_0.2.docx --output _import
 ```
 
 Review the extracted Markdown before integrating changes. The extractor masks credential values in text, but screenshots require a separate visual review.
@@ -56,7 +56,9 @@ Published site: https://gchellia79.github.io/IOS_XR_Lab_Guide/
 
 ## Conversion record
 
-Source: `IOS_XR_Lab_Guide_0.1.docx`. Extraction produced 50 images and one table, with nine credential values or pairs masked. The four major topics are preparation, commit configuration, operations and monitoring, and BGP.
+Source: `IOS_XR_Lab_Guide_0.2.docx`. Extraction produced 50 images and one table, with nine credential values or pairs masked. The four major topics are preparation, commit configuration, operations and monitoring, and BGP.
+
+Version 0.2 moves crash-information commands into operations and monitoring, corrects the `vpnv4` command spelling and the `LEVEL_1` inspection command, identifies the CE loopback interfaces, and removes the duplicated CE-1 loopback configuration. All 50 screenshots are unchanged from version 0.1.
 
 Image ranges map one-to-one in document order:
 
@@ -73,9 +75,9 @@ The chapter pages retain TODO warnings for these source ambiguities or missing o
 - Best-effort commit: failed-commit output is not supplied.
 - Rollback: command output is not supplied.
 - Process inspection: `show process` versus `show processes`, with no post-restart capture.
-- Describe exercise: source spelling `vpn4` and missing spawned-process output.
+- Describe exercise: missing spawned-process output.
 - User groups: inconsistent `LEVEL_1` / `level_1` spelling and angle-bracket command notation.
-- CE-2: `51.1.1.1/32` versus the later `Lo100` reference, with no complete PE-2/CE-2 configuration.
+- CE-2: no complete PE-2/CE-2 configuration is supplied.
 - Policy editor: the source title says Vim while the narration says Emacs.
 
 The text masking covers `password`, `passwd`, `secret`, `token`, and login-related username/password pairs. All 50 images were screened with local OCR; flagged login-related captures were visually checked and contained no visible password or token values. No additional CLI output was invented.

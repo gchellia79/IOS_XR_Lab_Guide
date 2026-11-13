@@ -53,6 +53,13 @@ Thu Oct 29 00:43:33.528 UTC
 | Location | `0/RP0/CPU0` | Source route-processor location |
 | Entry control | `n` | Number of displayed entries |
 
+6. Use the following commands to inspect crash information.
+
+```text
+show context
+show exceptions
+```
+
 ## 3.3 Memory leak detection
 
 A memory leak occurs when a process allocates memory but does not return it when no longer needed. Compare two snapshots around a trigger to inspect allocation differences.
@@ -107,7 +114,7 @@ IOS XR supports up to eight pipes to filter and format show-command output.
 
 ![Describe command output](images/image09.png)
 
-1. Execute `show bgp vpn4 unicast summary` or another command from the lab.
+1. Execute `show bgp vpnv4 unicast summary` or another command from the lab.
 2. Append `describe` and execute it again.
 3. Observe the required privileges.
 4. Note the CLI under **Spawn the Process**.
@@ -115,7 +122,7 @@ IOS XR supports up to eight pipes to filter and format show-command output.
 6. Execute the CLI listed under **Spawn the Process** and observe the output.
 
 !!! warning "TODO"
-    Verify the source spelling `vpn4` against the lab CLI. The source does not supply output for the spawned-process step.
+    The source does not supply output for the spawned-process step.
 
 ## 3.6 Trace functionality
 
@@ -196,7 +203,7 @@ username user2
 ```text
 show user authentication method
 show aaa usergroup <operator>
-show aaa usergroup <level_1 >
+show aaa usergroup < LEVEL_1 >
 ```
 
 !!! note

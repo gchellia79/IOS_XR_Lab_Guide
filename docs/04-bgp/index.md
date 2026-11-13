@@ -1,7 +1,7 @@
 # 04. BGP
 
 !!! abstract "Goal"
-    Establish PE-CE BGP neighbors, apply route policies, and verify received routes. Filter a selected prefix and edit a route policy using the supplied editor exercise.
+    Establish PE-CE BGP neighbors and verify how required eBGP route policies control route acceptance and advertisement. Filter a selected prefix and edit a route policy using the supplied editor exercise.
 
 ## 4.1 Topology and lab state
 
@@ -28,8 +28,8 @@
 | CE-1 AS | `65101` | CE-1 source configuration |
 | CE-2 AS | `65102` | Configure on CE-2 |
 | VRF | `VPN_A` | Provider-side VRF |
-| CE-1 prefix | `50.1.1.1/32` | Advertise into BGP |
-| CE-2 prefix | `51.1.1.1/32` | Advertise into BGP |
+| CE-1 prefix | `50.1.1.1/32` | Configure on `Loopback50` and advertise into BGP |
+| CE-2 prefix | `51.1.1.1/32` | Configure on `Loopback100` and advertise into BGP |
 | PE-1 neighbor | `172.16.1.2` | CE-1 address |
 | CE-1 neighbor | `172.16.1.1` | PE-1 address |
 
@@ -54,8 +54,6 @@ router bgp 65101
  neighbor 172.16.1.1 remote-as 100
  network 50.1.1.1 mask 255.255.255.255
 exit
-interface Loopback50
- ip address 50.1.1.1 255.255.255.255
 ```
 
 3. Use `show bgp vrf VPN_A summary` to verify the neighbor. Observe the zero received prefixes and the `!` marker.
@@ -86,7 +84,7 @@ router bgp 100
 
     ![BGP routes received after applying PASS](images/image03.png)
 
-3. Configure eBGP between PE-2 and CE-2 and advertise the CE-2 loopback, following the PE-1/CE-1 exercise.
+3. Configure eBGP between PE-2 and CE-2 and advertise `51.1.1.1/32` on CE-2 `Loopback100`, following the PE-1/CE-1 exercise.
 
     ![PE-2 and CE-2 BGP verification](images/image04.png)
 
@@ -95,7 +93,7 @@ router bgp 100
     ![CE-2 to CE-1 connectivity](images/image05.png)
 
 !!! warning "TODO"
-    The source initially asks for `51.1.1.1/32` on CE-2 but later says to advertise `Lo100`. Confirm the intended loopback interface. No complete PE-2/CE-2 configuration is supplied.
+    No complete PE-2/CE-2 configuration is supplied in the source.
 
 ## 4.4 Filter a prefix with Route Policy Language
 
