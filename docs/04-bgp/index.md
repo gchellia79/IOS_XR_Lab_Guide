@@ -1,7 +1,7 @@
 # 04. BGP
 
 !!! abstract "Goal"
-    Establish PE-CE BGP neighbors and verify how required eBGP route policies control route acceptance and advertisement. Filter a selected prefix and edit a route policy using the supplied editor exercise.
+    Become familiar with BGP configuration and route policies in IOS XR, including the requirement to associate a routing policy with an eBGP peer to prevent accidental route acceptance or advertisement. If a route policy is not configured in the appropriate address family, received prefixes (NLRI, Network Layer Reachability Information) are discarded and no NLRIs are advertised to eBGP peers.
 
 ## 4.1 Topology and lab state
 
