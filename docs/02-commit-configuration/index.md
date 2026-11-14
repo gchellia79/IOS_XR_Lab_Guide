@@ -79,7 +79,7 @@ RP/0/RP0/CPU0:R1#
 | Address | `11.11.11.11/32` | Loopback address |
 | Commit label | `ADDEDLOOPBACK0` | Label shown in the source |
 
-!!! warning "TODO"
+!!! warning "Source caveat"
     The source prompt before `exit` is missing `#`. The CLI sample is preserved as supplied.
 
 ## 2.3 Commit best-effort
@@ -112,7 +112,7 @@ commit
 5. Run `commit best-effort` to apply the valid changes.
 6. Use `show run class-map DATA_1` and `show run class-map DATA_2` to inspect the applied configuration.
 
-!!! warning "TODO"
+!!! warning "Source caveat"
     The source does not include the failed-commit output.
 
 ## 2.4 Commit confirmed
@@ -175,7 +175,7 @@ show cli history detail
 - Use the commit list to inspect previous commits.
 - Use CLI history to view executed commands.
 
-!!! warning "TODO"
+!!! warning "Source caveat"
     The source does not include rollback or operational-history output.
 
 ## Next step

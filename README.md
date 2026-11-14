@@ -69,7 +69,7 @@ Image ranges map one-to-one in document order:
 | `image15.png` through `image35.png` | `docs/03-operations-and-monitoring/images/image01.png` through `image21.png` |
 | `image36.png` through `image50.png` | `docs/04-bgp/images/image01.png` through `image15.png` |
 
-The chapter pages retain TODO warnings for these source ambiguities or missing outputs:
+The chapter pages note these source ambiguities or missing outputs:
 
 - Commit sample: missing `#` in the prompt before `exit`.
 - Best-effort commit: failed-commit output is not supplied.

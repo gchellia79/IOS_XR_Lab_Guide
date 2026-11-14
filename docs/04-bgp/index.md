@@ -92,7 +92,7 @@ router bgp 100
 
     ![CE-2 to CE-1 connectivity](images/image05.png)
 
-!!! warning "TODO"
+!!! warning "Source caveat"
     No complete PE-2/CE-2 configuration is supplied in the source.
 
 ## 4.4 Filter a prefix with Route Policy Language
@@ -173,7 +173,7 @@ RP/0/RP0/CPU0:R1#clear bgp vpnv4 unicast * soft in
 | Prefix set | `BLOCK_PREFIX_5` | Source editor exercise |
 | Route policy | `FILTER_IN_5` | Attach the prefix set |
 
-!!! warning "TODO"
+!!! warning "Source caveat"
     The source labels this exercise "RPL using Vim" but describes Emacs. Confirm the intended editor; the supplied screenshots are preserved.
 
 ## Next step

@@ -52,11 +52,11 @@ class Extractor:
         relationship = element.get(qn("r:embed")) or element.get(qn("r:id"))
         if not relationship:
             self.warnings.append("An image has no embedded relationship; inspect the original.")
-            return "<!-- TODO: external or unsupported image -->"
+            return "<!-- IMAGE OMITTED: external or unsupported image -->"
         part = self.document.part.related_parts.get(relationship)
         if part is None:
             self.warnings.append("An embedded image relationship could not be resolved.")
-            return "<!-- TODO: missing embedded image -->"
+            return "<!-- IMAGE OMITTED: missing embedded image -->"
         self.image_count += 1
         extension = Path(str(part.partname)).suffix.lower()
         filename = f"image{self.image_count:02d}{extension}"
