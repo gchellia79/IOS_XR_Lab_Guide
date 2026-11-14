@@ -79,9 +79,6 @@ RP/0/RP0/CPU0:R1#
 | Address | `11.11.11.11/32` | Loopback address |
 | Commit label | `ADDEDLOOPBACK0` | Label shown in the source |
 
-!!! warning "Source caveat"
-    The source prompt before `exit` is missing `#`. The CLI sample is preserved as supplied.
-
 ## 2.3 Commit best-effort
 
 An atomic commit fails if any configuration item has a semantic error. `commit best-effort` applies valid configuration items even when others fail.
@@ -111,9 +108,6 @@ commit
 4. Run `show configuration failed` to inspect the failure.
 5. Run `commit best-effort` to apply the valid changes.
 6. Use `show run class-map DATA_1` and `show run class-map DATA_2` to inspect the applied configuration.
-
-!!! warning "Source caveat"
-    The source does not include the failed-commit output.
 
 ## 2.4 Commit confirmed
 
@@ -174,9 +168,6 @@ show cli history detail
 - Use the commit-change command to view configuration changes since the specified number of commits.
 - Use the commit list to inspect previous commits.
 - Use CLI history to view executed commands.
-
-!!! warning "Source caveat"
-    The source does not include rollback or operational-history output.
 
 ## Next step
 

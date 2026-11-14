@@ -69,15 +69,4 @@ Image ranges map one-to-one in document order:
 | `image15.png` through `image35.png` | `docs/03-operations-and-monitoring/images/image01.png` through `image21.png` |
 | `image36.png` through `image50.png` | `docs/04-bgp/images/image01.png` through `image15.png` |
 
-The chapter pages note these source ambiguities or missing outputs:
-
-- Commit sample: missing `#` in the prompt before `exit`.
-- Best-effort commit: failed-commit output is not supplied.
-- Rollback: command output is not supplied.
-- Process inspection: `show process` versus `show processes`, with no post-restart capture.
-- Describe exercise: missing spawned-process output.
-- User groups: inconsistent `LEVEL_1` / `level_1` spelling and angle-bracket command notation.
-- CE-2: no complete PE-2/CE-2 configuration is supplied.
-- Policy editor: the source title says Vim while the narration says Emacs.
-
 The text masking covers `password`, `passwd`, `secret`, `token`, and login-related username/password pairs. All 50 images were screened with local OCR; flagged login-related captures were visually checked and contained no visible password or token values. No additional CLI output was invented.

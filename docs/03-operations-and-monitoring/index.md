@@ -26,9 +26,6 @@ Thu Oct 29 00:43:33.528 UTC
 2. Restart it with `process restart isis`.
 3. Display the process again and compare the IDs. The source notes that the job ID stays the same while process and thread IDs change.
 
-!!! warning "Source caveat"
-    The source alternates between `show processes isis` and `show process isis`; verify the accepted spelling on the lab image. No post-restart output is supplied.
-
 ## 3.2 Monitor processes
 
 `monitor processes` provides Unix `top`-like CPU, memory, and process information, refreshed every ten seconds.
@@ -121,9 +118,6 @@ IOS XR supports up to eight pipes to filter and format show-command output.
 5. Execute `run` to enter the underlying Linux shell.
 6. Execute the CLI listed under **Spawn the Process** and observe the output.
 
-!!! warning "Source caveat"
-    The source does not supply output for the spawned-process step.
-
 ## 3.6 Trace functionality
 
 IOS XR traces provide persistent diagnostic logging for daemons, protocols, and hardware without enabling disruptive real-time debugs.
@@ -208,9 +202,6 @@ show aaa usergroup < LEVEL_1 >
 
 !!! note
     The source identifies `cisco-support` as the highest-privilege group.
-
-!!! warning "Source caveat"
-    The source uses both `LEVEL_1` and `level_1`, and includes angle brackets around group names in the inspection commands. Verify the intended syntax on the lab image.
 
 ## 3.9 Run
 
