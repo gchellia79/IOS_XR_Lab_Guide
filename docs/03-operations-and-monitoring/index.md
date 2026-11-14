@@ -212,19 +212,13 @@ show aaa usergroup < LEVEL_1 >
 !!! warning "TODO"
     The source uses both `LEVEL_1` and `level_1`, and includes angle brackets around group names in the inspection commands. Verify the intended syntax on the lab image.
 
-## 3.9 Run and attach
+## 3.9 Run
 
 1. Execute `run` from EXEC mode to enter the underlying Linux Bash shell.
 
     ![Enter the Linux shell](images/image15.png)
 
 2. Use `exit` to return to the IOS XR CLI.
-3. Review the `attach` example for a multi-line-card chassis.
-
-    ![Attach to a line card from admin mode](images/image16.png)
-
-!!! note
-    `attach` operates from admin mode on a multi-line-card chassis. It is not available in this virtual XRd lab; the example is for reference.
 
 ## 3.10 Interface troubleshooting
 
